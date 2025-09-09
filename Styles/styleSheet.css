@@ -14,3 +14,24 @@
 .nav-Bar-Background{
     background-color: white;
 }
+
+.project-grid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    width: 100%;
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  width: 19rem;
+  height: 20rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-wrapper{
+  width: calc(1150px - 4rem);
+}
