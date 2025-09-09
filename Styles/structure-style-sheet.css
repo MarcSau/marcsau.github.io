@@ -1,3 +1,7 @@
+.body{
+  font-family: Verdana,sans-serif;
+}
+
 .footer {
     background-color: black;
     color: white;
@@ -34,4 +38,24 @@
 
 .project-wrapper{
   width: calc(1150px - 4rem);
+}
+
+.nav-bar-button{
+  font-size: 15px;
+  line-height: 1.5;
+  background-color: white; /* Initial background color (blue) */
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.nav-bar-button:hover{
+  background-color: grey;
+}
+
+.nav-bar-element{
+  margin-bottom: 1rem;
 }

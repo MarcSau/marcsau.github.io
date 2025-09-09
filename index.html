@@ -2,24 +2,18 @@
 <html>
 
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-    <link rel="stylesheet" href="/Styles/styleSheet.css">
+    <link rel="stylesheet" href="/Styles/structure-style-sheet.css">
 </head>
 
 <body>
 
     <!-- Top Navigation Bar -->
-    <div class="nav-Bar-Background" id="myNavbar">
-        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" title="Navigation Menu">
-        </a>
-        <a href="/index.html" class="w3-bar-item w3-button">HOME</a>
-        <a href="/Pages/portfolio.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i>
-            PORTFOLIO</a>
-        <a href="/Pages/resume.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i>
-            RESUME</a>
+    <div>
+        <div class="nav-bar-element" id="myNavbar">
+            <a href="/index.html" class="nav-bar-button">HOME</a>
+            <a href="/Pages/resume.html" class="nav-bar-button">
+                RESUME</a>
+        </div>
     </div>
 
     <div class="divider"></div>
@@ -31,15 +25,19 @@
 
 
     <div class="divider"></div>
-    
+
     <!-- Portfolio -->
-  <div class = "project-wrapper"> 
-      <div class="project-grid">
-        <div class="grid-item"><img src="/Resources/heroes-battle-print.png"></div>
-        <div class="grid-item"><img src="/Resources/RiderWorld.webp"></div>
-        <div class="grid-item"><img src="/Resources/heroes-battle-print.png"></div>
-      </div>
-  </div>
+    <p>
+        Projects
+    </p>
+
+    <div class="project-wrapper">
+        <div class="project-grid">
+            <div class="grid-item"><img src="/Resources/heroes-battle-print.png"></div>
+            <div class="grid-item"><img src="/Resources/RiderWorld.webp"></div>
+            <div class="grid-item"><img src="/Resources/Rider.webp"></div>
+        </div>
+    </div>
 
 
     <!-- Botton Footer -->
