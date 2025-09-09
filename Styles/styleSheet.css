@@ -1,0 +1,16 @@
+.footer {
+    background-color: black;
+    color: white;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    text-align: center;
+    height: 1.2rem;
+}
+
+.divider{
+    border-top: 3px solid #bbb;
+}
+
+.nav-Bar-Background{
+    background-color: white;
+}
