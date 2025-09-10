@@ -20,6 +20,7 @@
 }
 
 .grid-container-project-showcase>div.resources {
+    margin-top : 20px;
     height: 30rem;
     flex-grow: 1;
     min-width: 512px;
