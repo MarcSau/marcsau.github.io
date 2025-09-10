@@ -1,0 +1,81 @@
+.body {
+  font-family: Verdana, sans-serif;
+}
+
+.title{
+  font-family: Verdana, sans-serif;
+  color: blue;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.generic-text{
+  font-family: Verdana, sans-serif;
+  color: black;
+  font-size: large;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+  height: 1.2rem;
+}
+
+.divider {
+  border-top: 3px solid #bbb;
+}
+
+.nav-Bar-Background {
+  background-color: white;
+}
+
+.grid-container-index {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 10px;
+}
+
+.grid-container-index img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-width: 400px;
+}
+
+.nav-bar-button {
+  font-size: 15px;
+  line-height: 1.5;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.nav-bar-button:hover {
+  background-color: grey;
+}
+
+.nav-bar-element {
+  margin-bottom: 1rem;
+}
+
+.bullet-point{
+  list-style-type: square;
+  color: blue;
+}
+
+
+.bullet-point li::marker{
+  color: blue;
+}

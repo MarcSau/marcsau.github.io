@@ -1,0 +1,33 @@
+.grid-container-project-showcase {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-bottom: 2rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+.grid-container-project-showcase>div {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    overflow: hidden;
+}
+
+.grid-container-project-showcase>div.description {
+    grid-area: description;
+    text-align: justify;
+    margin-right: 4rem;
+}
+
+.grid-container-project-showcase>div.resources {
+    height: 30rem;
+    flex-grow: 1;
+    min-width: 512px;
+    min-height: 512px;
+}
+
+.header {
+    text-align: center;
+    justify-content: center;
+    margin: 0px auto;
+} 
