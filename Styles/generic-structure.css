@@ -1,21 +1,27 @@
-.body {
+html body {
+  height: 100% !important;
+  margin: 0;
+  padding: 0;
   font-family: Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: wheat;
 }
 
-.title{
+.title {
   font-family: Verdana, sans-serif;
   color: blue;
   font-size: x-large;
   font-weight: bold;
 }
 
-.generic-text{
+.generic-text {
   font-family: Verdana, sans-serif;
   color: black;
   font-size: large;
 }
 
-.hyperlink-text{
+.hyperlink-text {
   font-family: Verdana, sans-serif;
   color: blue;
   text-decoration: underline;
@@ -30,10 +36,25 @@
   padding-bottom: 4rem;
   text-align: center;
   height: 1.2rem;
+
+  flex-shrink: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .divider {
   border-top: 3px solid #bbb;
+}
+
+.page-content {
+  margin-left: 4%;
+  margin-right: 4%;
+  background-color: white;
+  flex: 1; 
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .nav-Bar-Background {
@@ -78,12 +99,12 @@
   margin-bottom: 1rem;
 }
 
-.bullet-point{
+.bullet-point {
   list-style-type: square;
   color: blue;
 }
 
 
-.bullet-point li::marker{
+.bullet-point li::marker {
   color: blue;
 }
