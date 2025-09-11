@@ -1,11 +1,10 @@
-html body {
-  height: 100% !important;
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  font-family: Verdana, sans-serif;
+  background-color: wheat;
   display: flex;
   flex-direction: column;
-  background-color: wheat;
 }
 
 .title {
@@ -32,29 +31,23 @@ html body {
 .footer {
   background-color: black;
   color: white;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
   text-align: center;
-  height: 1.2rem;
-
+  padding: 4rem 1rem;
   flex-shrink: 0;
-  margin: 0 auto;
-  box-sizing: border-box;
+  width: 100%;
 }
 
 .divider {
-  border-top: 3px solid #bbb;
+  border-top: 1px solid #bbb;
 }
 
 .page-content {
-  margin-left: 4%;
-  margin-right: 4%;
+  flex: 1; /* Grow to fill available space */
+  width: 92%;  
+  margin: 0 auto;
   background-color: white;
-  flex: 1; 
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 .nav-Bar-Background {
@@ -103,7 +96,6 @@ html body {
   list-style-type: square;
   color: blue;
 }
-
 
 .bullet-point li::marker {
   color: blue;
