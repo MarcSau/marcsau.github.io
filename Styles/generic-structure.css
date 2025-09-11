@@ -31,7 +31,7 @@ html, body {
 }
 
 .hyperlink-text {
-  font-family: Verdana, sans-serif;
+  font-family: Bookman, URW Bookman L, serif;
   color: blue;
   text-decoration: underline;
   font-weight: bold;
@@ -44,7 +44,10 @@ html, body {
   text-align: center;
   padding: 4rem 1rem;
   flex-shrink: 0;
-  width: 100%;
+  width: 92%;
+  margin: 0 auto;
+
+  box-sizing: border-box;
 }
 
 .divider {
