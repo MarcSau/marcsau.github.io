@@ -59,7 +59,7 @@
 }
 
 .nav-bar-button {
-  font-size: 15px;
+  font-size: 20px;
   line-height: 1.5;
   background-color: white;
   color: black;
@@ -71,7 +71,7 @@
 }
 
 .nav-bar-button:hover {
-  background-color: grey;
+  background-color: lightgray;
 }
 
 .nav-bar-element {
