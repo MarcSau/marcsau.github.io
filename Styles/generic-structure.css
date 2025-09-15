@@ -97,6 +97,10 @@ html, body {
   padding: 10px;
 }
 
+.grid-container-index-resnume-override{
+  max-width: 100%;
+}
+
 .grid-container-index img {
   width: 100%;
   height: auto;
