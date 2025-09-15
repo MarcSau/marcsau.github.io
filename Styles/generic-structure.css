@@ -54,6 +54,26 @@ html, body {
   border-top: 1px solid #bbb;
 }
 
+
+.skillset-entry {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.skillset-entry-text {
+  flex-grow: 1;
+  width: 50%;
+  text-align: left;
+}
+
+.skillset-entry-value {
+  flex-grow: 1;
+  width: 50%;
+  text-align: right;
+  color: blue;
+}
+
 .page-content {
   flex: 1; /* Grow to fill available space */
   width: 92%;  
@@ -83,6 +103,10 @@ html, body {
   display: block;
   object-fit: cover;
   max-width: 400px;
+}
+
+.grid-container-item{
+  margin: 0 3rem
 }
 
 .nav-bar-button {
