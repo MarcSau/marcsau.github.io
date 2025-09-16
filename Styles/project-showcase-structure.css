@@ -1,7 +1,7 @@
 .grid-container-project-showcase {
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+  flex-wrap: wrap;
+    justify-content: center;
     padding-bottom: 2rem;
     margin-left: 10rem;
     margin-right: 10rem;
@@ -17,14 +17,21 @@
     grid-area: description;
     text-align: justify;
     margin-right: 4rem;
+    min-width: 256px;
+    max-width: 1024px;
 }
 
 .grid-container-project-showcase>div.resources {
     margin-top : 20px;
     height: 30rem;
-    flex-grow: 1;
     min-width: 512px;
     min-height: 512px;
+}
+
+@media (max-width: 1400px) {
+  .grid-container-project-showcase  {
+    flex-direction: column;
+  }
 }
 
 .header {
