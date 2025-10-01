@@ -8,7 +8,7 @@
 }
 
 .grid-container-project-showcase>div {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #FFFEF7;
     padding: 10px;
     overflow: hidden;
 }
@@ -28,6 +28,15 @@
     min-height: 512px;
 }
 
+.api-buttons {
+  border: 1px blue;
+    min-width: 350px;
+}
+
+.api-interactions{
+    min-width: 700px;
+}
+
 @media (max-width: 1400px) {
   .grid-container-project-showcase  {
     flex-direction: column;
@@ -39,3 +48,29 @@
     justify-content: center;
     margin: 0px auto;
 } 
+
+.top-margin-header {
+  margin-top: 3rem;
+}
+
+.no-side-margin-header {
+  margin-left: 0rem;
+  margin-right: 0rem;
+}
+
+.interface-button{
+  font-size: 20px;
+  line-height: 1.5;
+  background-color: #7c74a93d;
+  color: black;
+  padding: 10px 20px;
+  width: 250px;
+  margin-top: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.interface-section{
+  text-align: left;
+}
