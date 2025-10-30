@@ -37,14 +37,23 @@
 .api-output-text-field{
     border: 5px  inset;
     min-width: 500px;
+    max-width: 600px;
     min-height: 500px;
-    justify-content: center;
+    max-height: 600px;
+    text-align: center;
     background-color: darkgray;
+}
+
+.api-output-table{
+    padding: 10px;
+    justify-content: center;
+    margin:auto;
+    text-align: center;
+    font-size: 19px;
 }
 
 .scrollable-textbox {
     font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
-    font-size: 82%;
     overflow:scroll;
 }
 
