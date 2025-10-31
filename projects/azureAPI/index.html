@@ -44,9 +44,7 @@
                     <div class="interface-section">
                         <p class="sub-title">Products</p>
                         <ul>
-                            <li class="visualless-list"><button class="interface-button"
-                                    onclick="RequestAllProducts();"> Get all Products</button></li>
-                            <li class="visualless-list"><button class="interface-button"> Get Product</button></li>
+                            <li class="visualless-list"><button class="interface-button" onclick="TryGetAllProducts();"> Get Products</button></li>
                             <li class="visualless-list"><button class="interface-button"> Add Product</button></li>
                             <li class="visualless-list"><button class="interface-button"> Remove Product</button></li>
                         </ul>
@@ -55,8 +53,7 @@
                     <div class="interface-section">
                         <p class="sub-title">Product types</p>
                         <ul>
-                            <li class="visualless-list"><button class="interface-button"> Get all Product types</button>
-                            </li>
+                            <li class="visualless-list"><button class="interface-button" onclick="TryGetAllProductTypes();"> Get all Product types</button></li>
                             <li class="visualless-list"><button class="interface-button"> Add Product type</button></li>
                             <li class="visualless-list"><button class="interface-button"> Remove Product type</button>
                             </li>
@@ -66,8 +63,6 @@
                     <div class="interface-section">
                         <p class="sub-title">Transaction</p>
                         <ul>
-                            <li class="visualless-list"><button class="interface-button"> Get all Transactions</button>
-                            </li>
                             <li class="visualless-list"><button class="interface-button"> Get Transactions</button></li>
                             <li class="visualless-list"><button class="interface-button"> Purchase Product</button></li>
                         </ul>
@@ -76,6 +71,9 @@
                 <div class="api-interactions">
                     <div class="api-input">
                         <p class="title"> Input </p>
+                        <div>
+                            
+                        </div>
                     </div>
                     <div class="api-output">
                         <p class="title"> Output </p>
@@ -95,7 +93,10 @@
         <a href="/marcsau.github.io/"> Marc Sau Batlle</a>
     </div>
 
-    <script src="/marcsau.github.io/Code/azureAPI/AzureComunication.js"></script>
+    <script src="/marcsau.github.io/Code/azureAPI/AzureGlobals.js"></script>
+    <script src="/marcsau.github.io/Code/azureAPI/AzureProducts.js"></script>
+    <script src="/marcsau.github.io/Code/azureAPI/AzureProductTypes.js"></script>
+    <script src="/marcsau.github.io/Code/azureAPI/AzureTransactions.js"></script>
 
 </body>
 

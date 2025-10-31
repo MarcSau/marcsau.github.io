@@ -34,6 +34,13 @@
     max-width: 350px;
 }
 
+.api-input {
+    min-width: 500px;
+    max-width: 600px;
+    min-height: 300px;
+    max-height: 400px;
+}
+
 .api-output-text-field{
     border: 5px  inset;
     min-width: 500px;
