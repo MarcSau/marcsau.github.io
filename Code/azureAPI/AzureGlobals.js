@@ -47,6 +47,24 @@ function SendPostRequest(path, body) {
     });
 }
 
+function SendDeleteRequest(path) {
+    let request_URL = window.API_URL + path;
+
+    return fetch(request_URL, {
+        method: "DELETE"
+    })
+    .then(response => {
+        if (!response.ok) {
+            return [];
+        }
+
+        return response;
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
 function EmptyInputFormHTML(){
     window.inputForm.innerHTML = "";
 }

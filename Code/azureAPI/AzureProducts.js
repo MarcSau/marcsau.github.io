@@ -1,5 +1,7 @@
+const productMainPath = "product";
+
 function TryGetAllProducts() {
-    SendGetRequest("product").then(products => {
+    SendGetRequest(productMainPath).then(products => {
         window.outputElement.innerHTML = GenerateProductTable(products);
         window.lastCachedProducts = products;
     })
@@ -66,7 +68,7 @@ function GenerateAddProductJSON(name, stock, price, type) {
 
 function TryAddProduct(product) {
 
-    SendPostRequest("product", product).then(response => {
+    SendPostRequest(productMainPath, product).then(response => {
         if (response.ok) {
             UpdateCachedProducts();
             EmptyInputFormHTML();
@@ -74,6 +76,30 @@ function TryAddProduct(product) {
     });
 }
 
-function TryDeleteProduct(id) {
 
+function GenerateDeleteProductHTML() {
+    productTypeSelect = GenerateSelectHTML(window.lastCachedProducts, "id");
+    window.inputForm.innerHTML =
+        `<form  onsubmit="HandleProductDeleteRequest(event)">
+            ` + productTypeSelect +
+        `<input type="submit" value="Submit">
+        </form>`;
+}
+
+function HandleProductDeleteRequest(event) {
+    event.preventDefault();
+    const form = event.target;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    TryDeleteProduct(Number(data.id));
+}
+
+function TryDeleteProduct(id) {
+    SendDeleteRequest(productMainPath + "/" + id).then(response => {
+        if (response.ok) {
+            UpdateCachedProducts();
+            EmptyInputFormHTML();
+        }
+    });
 }

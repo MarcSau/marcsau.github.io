@@ -1,7 +1,7 @@
-const mainPath = "productType";
+const productTypeMainPath = "productType";
 
 function TryGetAllProductTypes() {
-    SendGetRequest(mainPath).then(productTypes => {
+    SendGetRequest(productTypeMainPath).then(productTypes => {
         window.outputElement.innerHTML = GenerateProductTypeTable(productTypes);
         window.lastCachedProductTypes = productTypes;
     })
@@ -46,7 +46,7 @@ function HandleProductTypeAddRequest(event) {
 }
 
 function TryAddProductType(productType) {
-    SendPostRequest(mainPath, productType).then(response => {
+    SendPostRequest(productTypeMainPath, productType).then(response => {
         if (response.ok) {
             UpdateCachedProductTypes();
             EmptyInputFormHTML();
