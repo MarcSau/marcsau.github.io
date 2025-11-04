@@ -54,7 +54,30 @@ function TryAddProductType(productType) {
     });
 }
 
-function TryDeleteProductType(id) {
+function GenerateDeleteProductTypeHTML() {
+    productTypeSelect = GenerateSelectHTML(window.lastCachedProductTypes, "id");
+    window.inputForm.innerHTML =
+        `<form  onsubmit="HandleProductTypeDeleteRequest(event)">
+            ` + productTypeSelect +
+        `<input type="submit" value="Submit">
+        </form>`;
+}
 
+function HandleProductTypeDeleteRequest(event) {
+    event.preventDefault();
+    const form = event.target;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    TryDeleteProductType(Number(data.id));
+}
+
+function TryDeleteProductType(id) {
+    SendDeleteRequest(productTypeMainPath + "/" + id).then(response => {
+        if (response.ok) {
+            UpdateCachedProductTypes();
+            EmptyInputFormHTML();
+        }
+    });
 }
 

@@ -76,12 +76,11 @@ function TryAddProduct(product) {
     });
 }
 
-
 function GenerateDeleteProductHTML() {
-    productTypeSelect = GenerateSelectHTML(window.lastCachedProducts, "id");
+    productSelect = GenerateSelectHTML(window.lastCachedProducts, "id");
     window.inputForm.innerHTML =
         `<form  onsubmit="HandleProductDeleteRequest(event)">
-            ` + productTypeSelect +
+            ` + productSelect +
         `<input type="submit" value="Submit">
         </form>`;
 }
