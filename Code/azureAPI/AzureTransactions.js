@@ -1,6 +1,6 @@
 function TryGetAllTransactions() {
-    SendGetRequest("transaction").then(products => {
-        window.outputElement.innerHTML = GenerateProductTable(products);
+    SendGetRequest("transaction").then(transactions => {
+        window.outputElement.innerHTML = GenerateProductTable(transactions);
     })
 }
 

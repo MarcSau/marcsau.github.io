@@ -1,6 +1,7 @@
 function TryGetAllProductTypes() {
     SendGetRequest("productType").then(productTypes => {
         window.outputElement.innerHTML = GenerateProductTypeTable(productTypes);
+        window.lastCachedProductTypes = productTypes;
     })
 }
 
