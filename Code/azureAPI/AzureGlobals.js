@@ -47,6 +47,10 @@ function SendPostRequest(path, body) {
     });
 }
 
+function EmptyInputFormHTML(){
+    window.inputForm.innerHTML = "";
+}
+
 function GenerateSelectHTML(values, name) {
     let output = `<select name="${name}">`;
 

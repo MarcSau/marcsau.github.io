@@ -1,5 +1,7 @@
+const mainPath = "productType";
+
 function TryGetAllProductTypes() {
-    SendGetRequest("productType").then(productTypes => {
+    SendGetRequest(mainPath).then(productTypes => {
         window.outputElement.innerHTML = GenerateProductTypeTable(productTypes);
         window.lastCachedProductTypes = productTypes;
     })
@@ -26,9 +28,30 @@ function GenerateProductTypeEntry(productType) {
     </tr>`;
 }
 
+function GenerateAddProductTypeHTML() {
+    window.inputForm.innerHTML =
+        `<form  onsubmit="HandleProductTypeAddRequest(event)">
+            <input type="text" name="name" placeholder="Product Type">
+            <input type="submit" value="Submit">
+        </form>`;
+}
 
-function TryAddProductType(name) {
+function HandleProductTypeAddRequest(event) {
+    event.preventDefault();
+    const form = event.target;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
 
+    TryAddProductType(JSON.stringify({name: data.name}));
+}
+
+function TryAddProductType(productType) {
+    SendPostRequest(mainPath, productType).then(response => {
+        if (response.ok) {
+            UpdateCachedProductTypes();
+            EmptyInputFormHTML();
+        }
+    });
 }
 
 function TryDeleteProductType(id) {

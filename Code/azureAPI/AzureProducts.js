@@ -69,6 +69,7 @@ function TryAddProduct(product) {
     SendPostRequest("product", product).then(response => {
         if (response.ok) {
             UpdateCachedProducts();
+            EmptyInputFormHTML();
         }
     });
 }
