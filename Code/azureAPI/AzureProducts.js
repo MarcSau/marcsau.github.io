@@ -53,16 +53,15 @@ function HandleProductAddRequest(event) {
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
 
-    TryAddProduct(GenerateAddProductJSON(data.name, Number(data.initialStock), Number(data.price), Number(data.productType)));
+    TryAddProduct(GenerateAddProductJSON(data));
 }
 
-function GenerateAddProductJSON(name, stock, price, type) {
-
+function GenerateAddProductJSON(data) {
     return JSON.stringify({
-        name: name,
-        initialStock: stock,
-        price: price,
-        productType: type
+        name: data.name,
+        initialStock: Number(data.initialStock),
+        price: Number(data.price),
+        productType: Number(data.productType)
     });
 }
 
