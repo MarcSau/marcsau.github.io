@@ -40,7 +40,7 @@ function GeneratePurchaseProductTransactionHTML() {
     window.inputForm.innerHTML =
         `<form  onsubmit="HandlePurchaseProductTransactionRequest(event)">` + 
         productSelect +
-        `   <br><input type="number" name="amount" placeholder="Amount"><br>
+        `   <input type="number" name="amount" placeholder="Amount"><br>
             <input type="number" name="price" placeholder="Price" step=".01" min="0"><br>
             <input type="date" name="date" value="2025-01-01" min="2025-01-01"  max="2035-12-31"><br>
             <input type="submit" value="Submit">
@@ -66,7 +66,12 @@ function GeneratePurchaseTransactionJSON(data) {
 }
 
 function TryPurchaseProduct(data) {
+    EmptyInputFormHTML();
     SendPostRequest(transactionMainPath,data).then(response => {
-        EmptyInputFormHTML();
+        if(response.ok){ 
+            UpdateCachedProducts();
+        }else{
+            window.outputElement.innerHTML = response.data;
+        }
     });
 }

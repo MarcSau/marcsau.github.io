@@ -35,12 +35,16 @@ function SendPostRequest(path, body) {
         body: body,
         headers: { "Content-Type": "application/json" },
     })
-    .then(response => {
-        if (!response.ok) {
-            return [];
+    .then(async response => 
+    {
+        let data = null;
+        try {
+            data = await response.json();
+        } catch (e) {
+            console.warn("No JSON body found:", e);
         }
 
-        return response.json();
+        return { ok: response.ok, status: response.status, data };
     })
     .catch(error => {
         console.error('Error:', error);
@@ -76,7 +80,7 @@ function GenerateSelectHTML(values, name) {
         output += `<option value="${element.id}">${element.name}</option>`
     });
 
-    output += `</select>`;
+    output += `</select><br>`;
     return output;
 }
 

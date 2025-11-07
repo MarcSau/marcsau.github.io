@@ -1,84 +1,95 @@
 .grid-container-project-showcase {
-    display: flex;
+  display: flex;
   flex-wrap: wrap;
-    justify-content: center;
-    padding-bottom: 2rem;
-    margin-left: 10rem;
-    margin-right: 10rem;
+  justify-content: center;
+  padding-bottom: 2rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
 }
 
 .grid-container-project-showcase>div {
-    background-color: #FFFEF7;
-    padding: 10px;
-    overflow: hidden;
+  background-color: #FFFEF7;
+  padding: 10px;
+  overflow: hidden;
 }
 
 .grid-container-project-showcase>div.description {
-    grid-area: description;
-    text-align: justify;
-    margin-right: 4rem;
-    min-width: 256px;
-    max-width: 1024px;
+  grid-area: description;
+  text-align: justify;
+  margin-right: 4rem;
+  min-width: 256px;
+  max-width: 1024px;
 }
 
 .grid-container-project-showcase>div.resources {
-    margin-top : 20px;
-    height: 30rem;
-    min-width: 512px;
-    min-height: 512px;
+  margin-top: 20px;
+  height: 30rem;
+  min-width: 512px;
+  min-height: 512px;
 }
 
 .api-buttons {
   border: 1px blue;
-    min-width: 300px;
-    max-width: 350px;
+  min-width: 300px;
+  max-width: 350px;
 }
 
 .api-input {
-    min-width: 500px;
-    max-width: 600px;
-    min-height: 300px;
-    max-height: 400px;
+  min-width: 500px;
+  max-width: 600px;
+  min-height: 300px;
+  max-height: 300px;
 }
 
-.api-output-text-field{
-    border: 5px  inset;
-    min-width: 500px;
-    max-width: 600px;
-    min-height: 500px;
-    max-height: 600px;
-    text-align: center;
-    background-color: darkgray;
+.api-input-form>form>input,select{
+  width: 250px;
+  height: 40px;
+  font-size: 16px;
+  padding: 8px;
+  margin: 2px 0;
+  border-radius: 5px;
+  border: 1px solid #888;
+  box-sizing: border-box;
 }
 
-.api-output-table{
-    padding: 10px;
-    justify-content: center;
-    margin:auto;
-    text-align: center;
-    font-size: 19px;
+.api-output-text-field {
+  border: 5px inset;
+  min-width: 500px;
+  max-width: 600px;
+  min-height: 500px;
+  max-height: 600px;
+  text-align: center;
+  background-color: darkgray;
+}
+
+.api-output-table {
+  padding: 10px;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  font-size: 19px;
 }
 
 .scrollable-textbox {
-    font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
-    overflow:scroll;
+  font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  overflow: scroll;
 }
 
-.api-interactions{
-    min-width: 600px;
+.api-interactions {
+  min-width: 600px;
 }
 
 @media (max-width: 1400px) {
-  .grid-container-project-showcase  {
+  .grid-container-project-showcase {
     flex-direction: column;
   }
 }
 
 .header {
-    text-align: center;
-    justify-content: center;
-    margin: 0px auto;
-} 
+  text-align: center;
+  justify-content: center;
+  margin: 0px auto;
+}
 
 .top-margin-header {
   margin-top: 3rem;
@@ -89,7 +100,7 @@
   margin-right: 0rem;
 }
 
-.interface-button{
+.interface-button {
   font-size: 20px;
   line-height: 1.5;
   background-color: #7c74a93d;
@@ -102,6 +113,6 @@
   transition: background-color 0.3s ease;
 }
 
-.interface-section{
+.interface-section {
   text-align: left;
 }

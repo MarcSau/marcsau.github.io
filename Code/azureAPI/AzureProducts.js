@@ -40,8 +40,8 @@ function GenerateAddProductHTML() {
     window.inputForm.innerHTML =
         `<form  onsubmit="HandleProductAddRequest(event)">
             <input type="text" name="name" placeholder="Product name"><br>
-            <input type="number" name="initialStock" placeholder="Initial Stock"><br>
-            <input type="number"  name="price" placeholder="Price" step=".01" min="0"><br>
+            <input type="number" name="initialStock" placeholder="Initial stock"><br>
+            <input type="number"  name="price" placeholder="Price per unit" step=".01" min="0"><br>
             ` + productTypeSelect +
         `<input type="submit" value="Submit">
         </form>`;

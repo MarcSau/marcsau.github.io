@@ -31,7 +31,7 @@ function GenerateProductTypeEntry(productType) {
 function GenerateAddProductTypeHTML() {
     window.inputForm.innerHTML =
         `<form  onsubmit="HandleProductTypeAddRequest(event)">
-            <input type="text" name="name" placeholder="Product Type">
+            <input type="text" name="name" placeholder="Product type name"><br>
             <input type="submit" value="Submit">
         </form>`;
 }
