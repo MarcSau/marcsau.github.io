@@ -41,6 +41,11 @@
   max-height: 300px;
 }
 
+.api-output {
+  min-width: 500px;
+  max-width: 600px;
+}
+
 .api-input-form>form>input,select{
   width: 250px;
   height: 40px;

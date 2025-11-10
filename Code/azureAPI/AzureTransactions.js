@@ -40,9 +40,9 @@ function GeneratePurchaseProductTransactionHTML() {
     window.inputForm.innerHTML =
         `<form  onsubmit="HandlePurchaseProductTransactionRequest(event)">` + 
         productSelect +
-        `   <input type="number" name="amount" placeholder="Amount"><br>
-            <input type="number" name="price" placeholder="Price" step=".01" min="0"><br>
-            <input type="date" name="date" value="2025-01-01" min="2025-01-01"  max="2035-12-31"><br>
+        `   <input type="number" name="amount" placeholder="Amount" required><br>
+            <input type="number" name="price" placeholder="Price" step=".01" min="0" required><br>
+            <input type="date" name="date" value="2025-01-01" min="2025-01-01"  max="2035-12-31" required><br>
             <input type="submit" value="Submit">
         </form>`;
 }
@@ -70,6 +70,7 @@ function TryPurchaseProduct(data) {
     SendPostRequest(transactionMainPath,data).then(response => {
         if(response.ok){ 
             UpdateCachedProducts();
+            window.outputElement.innerHTML = "";
         }else{
             window.outputElement.innerHTML = response.data;
         }

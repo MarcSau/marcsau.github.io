@@ -77,7 +77,7 @@ function EmptyInputFormHTML(){
 }
 
 function GenerateSelectHTML(values, name) {
-    let output = `<select name="${name}">`;
+    let output = `<select name="${name}" required>`;
 
     values.forEach(element => {
         output += `<option value="${element.id}">${element.name}</option>`

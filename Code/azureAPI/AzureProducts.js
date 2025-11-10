@@ -39,9 +39,9 @@ function GenerateAddProductHTML() {
     productTypeSelect = GenerateSelectHTML(window.lastCachedProductTypes, "productType");
     window.inputForm.innerHTML =
         `<form  onsubmit="HandleProductAddRequest(event)">
-            <input type="text" name="name" placeholder="Product name"><br>
-            <input type="number" name="initialStock" placeholder="Initial stock"><br>
-            <input type="number"  name="price" placeholder="Price per unit" step=".01" min="0"><br>
+            <input type="text" name="name" placeholder="Product name" required><br>
+            <input type="number" name="initialStock" placeholder="Initial stock" required><br>
+            <input type="number"  name="price" placeholder="Price per unit" step=".01" min="0" required><br>
             ` + productTypeSelect +
         `<input type="submit" value="Submit">
         </form>`;
@@ -66,11 +66,11 @@ function GenerateAddProductJSON(data) {
 }
 
 function TryAddProduct(product) {
-
+    EmptyInputFormHTML();
     SendPostRequest(productMainPath, product).then(response => {
         if (response.ok) {
+            window.outputElement.innerHTML = "";
             UpdateCachedProducts();
-            EmptyInputFormHTML();
         }
     });
 }
@@ -94,8 +94,8 @@ function HandleProductDeleteRequest(event) {
 }
 
 function TryDeleteProduct(id) {
+    EmptyInputFormHTML();
     SendDeleteRequest(productMainPath + "/" + id).then(response => {
-        EmptyInputFormHTML();
         if (response.ok) {
             UpdateCachedProducts();
         }else {

@@ -31,7 +31,7 @@ function GenerateProductTypeEntry(productType) {
 function GenerateAddProductTypeHTML() {
     window.inputForm.innerHTML =
         `<form  onsubmit="HandleProductTypeAddRequest(event)">
-            <input type="text" name="name" placeholder="Product type name"><br>
+            <input type="text" name="name" placeholder="Product type name" required><br>
             <input type="submit" value="Submit">
         </form>`;
 }
@@ -46,9 +46,10 @@ function HandleProductTypeAddRequest(event) {
 }
 
 function TryAddProductType(productType) {
+    EmptyInputFormHTML();
     SendPostRequest(productTypeMainPath, productType).then(response => {
-        EmptyInputFormHTML();
         if (response.ok) {
+            window.outputElement.innerHTML = "";
             UpdateCachedProductTypes();
         }
     });
@@ -73,8 +74,8 @@ function HandleProductTypeDeleteRequest(event) {
 }
 
 function TryDeleteProductType(id) {
+    EmptyInputFormHTML();
     SendDeleteRequest(productTypeMainPath + "/" + id).then(response => {
-        EmptyInputFormHTML();
         if (response.ok) {
             UpdateCachedProductTypes();
         }else {
