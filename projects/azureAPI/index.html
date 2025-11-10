@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/marcsau.github.io/Styles/generic-structure.css">
+    <link rel="stylesheet" href="/marcsau.github.io/Styles/project-showcase-structure.css">
+</head>
+
+<body>
+
+    <div class="page-content">
+        <!-- Top Navigation Bar -->
+        <div>
+            <div class="nav-bar-element" id="myNavbar">
+                <a href="/marcsau.github.io/" class="nav-bar-button">HOME</a>
+                <a href="/marcsau.github.io/resume/" class="nav-bar-button">RESUME</a>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="top-margin-header header"><img
+                src="/marcsau.github.io/Resources/MicrosoftAzure/microsoft-azure-logo.png" width="450" height="150">
+
+            <div class="description">
+                <p class="title"> About </p>
+                <p class="generic-text">
+                    This is an interface created to interact with an REST API currently hosted on Microsoft Azure, said API
+                    simulates a shop backend with an SQLite database with products, product types and transactions.<br>
+                    You will be able to add and remove products and product types from the backend and do transactions that will affect the
+                    stock of said items and notify you of impossible requests.<br>
+                    Due to the limitations of the plan used in azure response might be a bit slow, if you are interested
+                    in checking the code of the API directly its currently hosted in a public git
+                    repository <a class="hyperlink-text" href="https://github.com/MarcSau/StoreBackendAPI">here</a>
+                </p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="no-side-margin-header grid-container-project-showcase top-margin-header">
+                <div class="api-buttons">
+                    <p class="title"> Actions </p>
+                    <div class="interface-section">
+                        <p class="sub-title">Products</p>
+                        <ul class="visualless-list">
+                            <li><button class="interface-button" onclick="TryGetAllProducts();">
+                                    Get Products</button></li>
+                            <li><button class="interface-button"
+                                    onclick="GenerateAddProductHTML();"> Add Product</button></li>
+                            <li><button class="interface-button"
+                                    onclick="GenerateDeleteProductHTML();"> Remove Product</button></li>
+                        </ul>
+                    </div>
+
+                    <div class="interface-section">
+                        <p class="sub-title">Product types</p>
+                        <ul class="visualless-list">
+                            <li><button class="interface-button"
+                                    onclick="TryGetAllProductTypes();"> Get all Product types</button></li>
+                            <li><button class="interface-button"
+                                    onclick="GenerateAddProductTypeHTML();"> Add Product type</button></li>
+                            <li><button class="interface-button"
+                                    onclick="GenerateDeleteProductTypeHTML()"> Remove Product type</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="interface-section">
+                        <p class="sub-title">Transaction</p>
+                        <ul class="visualless-list">
+                            <li><button class="interface-button"
+                                    onclick="TryGetAllTransactions();"> Get Transactions</button></li>
+                            <li><button class="interface-button"
+                                    onclick="GeneratePurchaseProductTransactionHTML();"> Purchase Product</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="api-interactions">
+                    <div class="api-input">
+                        <p class="title"> Input </p>
+                        <div class="api-input-form"id="input-form">
+
+                        </div>
+                    </div>
+
+                    <div class="api-output">
+                        <p class="title"> Output </p>
+                        <div readonly id="output-textbox" class="api-output-text-field scrollable-textbox">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Botton Footer -->
+    <div class="footer">
+        Copyright ©
+        <a href="/marcsau.github.io/"> Marc Sau Batlle</a>
+    </div>
+
+    <script src="/marcsau.github.io/Code/azureAPI/AzureGlobals.js">
+    </script>
+    <script src="/marcsau.github.io/Code/azureAPI/AzureProductTypes.js"></script>
+    <script src="/marcsau.github.io/Code/azureAPI/AzureProducts.js"></script>
+    <script src="/marcsau.github.io/Code/azureAPI/AzureTransactions.js"></script>
+
+</body>
+
+</html>

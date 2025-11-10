@@ -123,6 +123,10 @@ html, body {
   color: blue;
 }
 
+.visualless-list {
+  list-style-type: none;
+}
+
 .skillset-entry {
   display: flex;
   justify-content: space-between;
@@ -142,4 +146,10 @@ html, body {
   text-align: right;
   color: blue;
   font-size: large;
+}
+
+.centerd-link{
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
 }
