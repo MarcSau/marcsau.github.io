@@ -47,9 +47,9 @@ function HandleProductTypeAddRequest(event) {
 
 function TryAddProductType(productType) {
     SendPostRequest(productTypeMainPath, productType).then(response => {
+        EmptyInputFormHTML();
         if (response.ok) {
             UpdateCachedProductTypes();
-            EmptyInputFormHTML();
         }
     });
 }
@@ -74,9 +74,11 @@ function HandleProductTypeDeleteRequest(event) {
 
 function TryDeleteProductType(id) {
     SendDeleteRequest(productTypeMainPath + "/" + id).then(response => {
+        EmptyInputFormHTML();
         if (response.ok) {
             UpdateCachedProductTypes();
-            EmptyInputFormHTML();
+        }else {
+            window.outputElement.innerHTML = response.data;
         }
     });
 }

@@ -57,12 +57,15 @@ function SendDeleteRequest(path) {
     return fetch(request_URL, {
         method: "DELETE"
     })
-    .then(response => {
-        if (!response.ok) {
-            return [];
+    .then(async response => {
+        let data = null;
+        try {
+            data = await response.json();
+        } catch (e) {
+            console.warn("No JSON body found:", e);
         }
 
-        return response;
+        return { ok: response.ok, status: response.status, data };
     })
     .catch(error => {
         console.error('Error:', error);

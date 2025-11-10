@@ -95,9 +95,11 @@ function HandleProductDeleteRequest(event) {
 
 function TryDeleteProduct(id) {
     SendDeleteRequest(productMainPath + "/" + id).then(response => {
+        EmptyInputFormHTML();
         if (response.ok) {
             UpdateCachedProducts();
-            EmptyInputFormHTML();
+        }else {
+            window.outputElement.innerHTML = response.data;
         }
     });
 }
