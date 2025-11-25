@@ -35,9 +35,9 @@ html, body {
 .generic-text {
   font-family: Bookman, URW Bookman L, serif;
   color: black;
-  font-size: large;
+  font-size: larger;
   text-align: justify;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .hyperlink-text {
